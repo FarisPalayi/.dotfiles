@@ -1,0 +1,45 @@
+#!/bin/bash
+# Common aliases for both bash and zsh
+
+# Python aliases - EXISTING: From your .zshrc
+alias python='python3.11'
+alias pip='pip3.11'
+alias pytest='python -m pytest'
+
+# Enhanced ls commands - EXISTING: From your .bashrc
+alias ll='ls -alF'
+alias la='ls -A'
+alias l='ls -CF'
+alias ls='ls --color=auto'
+
+# Directory navigation - NEW but very common and safe
+alias ..='cd ..'
+alias ...='cd ../..'
+alias ....='cd ../../..'
+
+# Grep with color - EXISTING: From your .bashrc
+alias grep='grep --color=auto'
+alias fgrep='fgrep --color=auto'
+alias egrep='egrep --color=auto'
+
+# Git shortcuts - NEW but optional (commonly used)
+alias gs='git status'
+alias ga='git add'
+alias gc='git commit'
+alias gp='git push'
+alias gl='git oneline'
+
+# System shortcuts - NEW but helpful for config management
+alias reload-bash='source ~/.bashrc'
+alias reload-zsh='source ~/.zshrc'
+alias editbash='${EDITOR:-nano} ~/.bashrc'
+alias editzsh='${EDITOR:-nano} ~/.zshrc'
+alias cls='clear'
+
+# Safety nets - NEW but important for preventing accidents
+alias rm='rm -i'    # Prompt before removing files
+alias cp='cp -i'    # Prompt before overwriting files
+alias mv='mv -i'    # Prompt before overwriting files
+
+# Long running command alert - EXISTING: From your .bashrc
+alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo error)" "$(history|tail -n1|sed -e '\''s/^\s*[0-9]\+\s*//;s/[;&|]\s*alert$//'\'')"'
