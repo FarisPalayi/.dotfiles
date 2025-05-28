@@ -10,8 +10,8 @@ if [ -d "$HOME/bin" ]; then
     export PATH="$HOME/bin:$PATH"     # NEW: Common practice for user scripts
 fi
 
-# Google Cloud SDK paths - From your existing .zshrc, made shell-agnostic
-if [ -f "$HOME/google-cloud-sdk/path.bash.inc" ]; then
+# Google Cloud SDK paths - From your existing .zshrc
+if [ -f "$HOME/google-cloud-sdk/path.bash.inc" ] && [ -n "$BASH_VERSION" ]; then
     source "$HOME/google-cloud-sdk/path.bash.inc"    # EXISTING: From .zshrc
 fi
 

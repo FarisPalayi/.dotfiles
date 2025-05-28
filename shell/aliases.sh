@@ -43,3 +43,23 @@ alias mv='mv -i'    # Prompt before overwriting files
 
 # Long running command alert - EXISTING: From your .bashrc
 alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo error)" "$(history|tail -n1|sed -e '\''s/^\s*[0-9]\+\s*//;s/[;&|]\s*alert$//'\'')"'
+
+# Development shortcuts
+alias ports='netstat -tulanp'
+alias meminfo='free -m -l -t'
+alias psmem='ps auxf | sort -nr -k 4'
+alias pscpu='ps auxf | sort -nr -k 3'
+
+# Docker shortcuts (if you use Docker)
+alias dps='docker ps'
+alias dpa='docker ps -a'
+alias di='docker images'
+alias dexec='docker exec -it'
+
+# Quick file operations
+alias h='history'
+alias j='jobs -l'
+alias path='echo -e ${PATH//:/\\n}'
+alias now='date +"%T"'
+alias nowtime=now
+alias nowdate='date +"%d-%m-%Y"'

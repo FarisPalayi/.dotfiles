@@ -49,3 +49,7 @@ serve() {
 showpath() {
     echo "$PATH" | tr ':' '\n' | nl
 }
+
+ff() {
+    find . -name "*$1*" 2>/dev/null
+}
