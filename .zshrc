@@ -6,7 +6,6 @@ export ZSH="$HOME/.oh-my-zsh"
 
 ZSH_THEME="powerlevel10k/powerlevel10k"
 
-
 # fzf-tab
 autoload -U compinit; compinit
 source ~/fzf-tab/fzf-tab.plugin.zsh
@@ -22,6 +21,8 @@ plugins=(
     python                   # NEW: Python completion
     pip                      # NEW: pip completion
     history-substring-search # NEW: Search history with up/down arrows
+    command-not-found        # NEW: Command not found completion
+    sudo                     # NEW: sudo completion
 )
 
 # Source Oh My Zsh - EXISTING

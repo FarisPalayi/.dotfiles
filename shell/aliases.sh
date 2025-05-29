@@ -32,6 +32,7 @@ alias gl='git oneline'
 # System shortcuts - NEW but helpful for config management
 alias edit-bash='${EDITOR:-nano} ~/.bashrc'
 alias edit-zsh='${EDITOR:-nano} ~/.zshrc'
+alias please='sudo'
 
 if [ -n "$ZSH_VERSION" ]; then
   alias reload-shell='exec zsh'
