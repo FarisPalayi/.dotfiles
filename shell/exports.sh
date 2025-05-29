@@ -8,7 +8,7 @@ export HISTFILESIZE=20000               # NEW: Increased from 2000
 export HISTCONTROL=ignoreboth:erasedups # NEW: Added erasedups to remove duplicates
 
 # Editor preferences - Safe defaults
-export EDITOR='nano'    # NEW: Default editor (change to vim/code if preferred)
+export EDITOR='vim'    # NEW: Default editor
 export VISUAL='nano'    # NEW: Visual editor for programs that need it
 
 # Language settings - Standard UTF-8 setup
@@ -27,3 +27,6 @@ export NVM_DIR="$HOME/.nvm"  # EXISTING: Moved here for sharing
 
 # For GPG signing
 export GPG_TTY=$(tty)
+
+# cd command shortcuts.
+export CDPATH=".:~:/mnt/c/Users/ACER/Personal/Coding/Write-Code/projects/active"

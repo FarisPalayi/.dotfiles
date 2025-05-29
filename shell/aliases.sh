@@ -30,10 +30,15 @@ alias gp='git push'
 alias gl='git oneline'
 
 # System shortcuts - NEW but helpful for config management
-alias reload-bash='source ~/.bashrc'
-alias reload-zsh='source ~/.zshrc'
-alias editbash='${EDITOR:-nano} ~/.bashrc'
-alias editzsh='${EDITOR:-nano} ~/.zshrc'
+alias edit-bash='${EDITOR:-nano} ~/.bashrc'
+alias edit-zsh='${EDITOR:-nano} ~/.zshrc'
+
+if [ -n "$ZSH_VERSION" ]; then
+  alias reload-shell='exec zsh'
+elif [ -n "$BASH_VERSION" ]; then
+  alias reload-shell='source ~/.bashrc'
+fi
+
 alias cls='clear'
 
 # Safety nets - NEW but important for preventing accidents
@@ -63,3 +68,4 @@ alias path='echo -e ${PATH//:/\\n}'
 alias now='date +"%T"'
 alias nowtime=now
 alias nowdate='date +"%d-%m-%Y"'
+
