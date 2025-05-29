@@ -3,6 +3,20 @@
 Personal shell configuration for bash and zsh in WSL.
 
 ## Structure
+```
+~/
+├── .config/
+│   └── shell/
+│       ├── aliases.sh
+│       ├── exports.sh
+│       ├── functions.sh
+│       └── path.sh
+├── .bashrc
+├── .zshrc
+├── .bash_profile
+└── .profile
+```
+
 - `.bashrc` - Bash configuration
 - `.zshrc` - Zsh configuration  
 - `.profile` - Login shell configuration
