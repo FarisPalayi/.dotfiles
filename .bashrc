@@ -74,3 +74,5 @@ fi
 
 # Load local bash aliases if they exist - EXISTING
 [ -f ~/.bash_aliases ] && source ~/.bash_aliases
+
+[ -f ~/.fzf.bash ] && source ~/.fzf.bash

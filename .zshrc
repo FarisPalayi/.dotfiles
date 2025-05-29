@@ -6,6 +6,11 @@ export ZSH="$HOME/.oh-my-zsh"
 
 ZSH_THEME="powerlevel10k/powerlevel10k"
 
+
+# fzf-tab
+autoload -U compinit; compinit
+source ~/fzf-tab/fzf-tab.plugin.zsh
+
 # Oh My Zsh plugins - ENHANCED: Added useful plugins
 plugins=(
     zsh-autosuggestions
@@ -45,9 +50,17 @@ setopt HIST_IGNORE_DUPS     # Don't record duplicate commands
 setopt HIST_IGNORE_ALL_DUPS # Remove older duplicate commands
 setopt HIST_REDUCE_BLANKS   # Remove superfluous blanks
 setopt HIST_IGNORE_SPACE    # Don't record commands starting with space
+setopt HIST_SAVE_NO_DUPS    # Don't save duplicate commands
+setopt HIST_FIND_NO_DUPS    # Prevents showing any duplicates in history
+
 
 # Case insensitive completion - NEW: Convenient completion
+zstyle ':completion:*:git-checkout:*' sort false
 zstyle ':completion:*' matcher-list 'm:{a-z}={A-Za-z}'
+zstyle ':completion:*' list-colors "${(s.:.)LS_COLORS}"
+zstyle ':completion:*' menu no
+# zstyle ':fzf-tab:complete:cd:*' fzf-preview 'ls --color $realpath'
+zstyle ':fzf-tab:complete:cd:*' fzf-preview 'ls -1 --color $realpath'
 
 # NVM loading - EXISTING: From your original config
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
@@ -61,3 +74,11 @@ fi
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+
+# set keybindings for autosuggestion and etc.
+bindkey -e 
+bindkey '^p' history-search-backward
+bindkey '^n' history-search-forward
+
+# fzf
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
