@@ -70,3 +70,5 @@ alias now='date +"%T"'
 alias nowtime=now
 alias nowdate='date +"%d-%m-%Y"'
 
+# Others
+alias yt=yt-dlp
