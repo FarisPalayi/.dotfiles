@@ -30,3 +30,5 @@ export GPG_TTY=$(tty)
 
 # cd command shortcuts.
 export CDPATH=".:~:/mnt/c/Users/ACER/Personal/Coding/Write-Code/projects/active"
+export PNPM_HOME="$HOME/.local/share/pnpm"
+export PATH="$PNPM_HOME:$PATH"

@@ -72,3 +72,5 @@ alias nowdate='date +"%d-%m-%Y"'
 
 # Others
 alias yt=yt-dlp
+alias c=cls
+alias sqlite=sqlite3
